@@ -31,27 +31,59 @@ body {
     background-color: var(--color2);
 }
 
-main {
+#polls-main-page{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    background: linear-gradient(to left, red, purple, blue);
+    height: 100%;
+    width: 100%;
 }
 
-section {
-    background-color: var(--color5);
-    max-width: 80%;
+#home-page-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    background: linear-gradient(to left, red, purple, blue);
+    height: 100%;
+    width: 100%;
 }
+
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+#sign-in-container{
+    border: 10px white double;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 80%;
+    margin: 100px;
+    padding: 30px, 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#sign-up-container{
+    border: 10px white double;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 80%;
+    margin: 100px;
+    padding: 30px, 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
 
 header {
     display: flex;
