@@ -9,6 +9,8 @@ export async function getPolls(){
         .from('polls')
         .select('*');
 
+    await getUser();
+
     return response.body;
 }
 
@@ -22,10 +24,10 @@ export async function createPolls(poll){
 
 export async function signIn(email, password){
     const response = await client.auth.signIn({
-        email: email,
-        password: password,
+        email: email.email,
+        password: password.password,
     });
-    return response;
+    return response.user;
 }
 
 export async function signUp(email, password){
@@ -33,7 +35,7 @@ export async function signUp(email, password){
         email: email,
         password: password,
     });
-    return response;
+    return response.user;
 }
 
 export async function getUser(){
@@ -45,7 +47,7 @@ export async function getUser(){
 export async function redirectUser(){
     const user = getUser();
 
-    if(!user){
+    if (!user){
         window.location.href = '../';
     }
 }

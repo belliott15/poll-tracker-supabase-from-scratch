@@ -1,4 +1,4 @@
-import { signIn, signUp, getUser } from './fetch-utils';
+import { signIn, signUp, getUser } from './fetch-utils.js';
 // import functions and grab DOM elements
 const signInForm = document.querySelector('#sign-in-form');
 const signUpForm = document.querySelector('#sign-up-form');
@@ -9,12 +9,9 @@ signInForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const data = new FormData(signInForm);
-    const email = data.get('email');
-    const password = data.get('password');
-    await signIn(email, password);
-
-    const user = await getUser();
-
+    const user = await signIn(data.get('email'), data.get('password'));
+    // const user = await getUser();
+    console.log(user);
     if (user){
         window.href = './polls';
     }
@@ -24,11 +21,10 @@ signUpForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const data = new FormData(signInForm);
-    const email = data.get('email');
-    const password = data.get('password');
-    await signUp(email, password);
+    const user = await signUp(data.get('email'), data.get('password'));
+    console.log(user);
 
-    const user = await getUser();
+    // const user = await getUser();
     if (user){
         window.href = './polls';
     }

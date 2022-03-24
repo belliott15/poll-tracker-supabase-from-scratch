@@ -16,41 +16,38 @@
 <body>
     <header>
         <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
+            <img src="../assets/big-logo.png" />
         </div>
     </header>
     <main id="polls-main-page">
         <section id="user-input-container">
             <div>
                 <form id="user-form">
-                    <h2>Question</h2>
-                    <input name="question-input" id="question-input" />
-                    <h3>Option 1</h3>
-                    <input name="option-1-input" id="option-1-input" />
-                    <h3>Option 2</h3>
-                    <input name="option-2-input" id="option-2-input" />
-                    <button name="submit-button" id="submit button">Submit</button>
+                    <div id="question-div">
+                        <h2>Question</h2>
+                        <input name="question-input" id="question-input" />
+                    </div>
+                    <div id="option-div">
+                        <h3>Option 1</h3>
+                        <input name="option-1-input" id="option-1-input" />
+                        <h3>Option 2</h3>
+                        <input name="option-2-input" id="option-2-input" />
+                        <button name="submit-button" id="submit button">Submit</button>
+                    </div>
                 </form>
             </div>
         </section>
-        <section id="display-current-polls-container">
+        <section id="current-polls-container">
             <button id="option-1-addition">+</button>
             <button id="option-1-subtraction">-</button>
-            <div>
-                <p id="option-1">Option 1</p>
-                <p id="vote-1">Vote 1</p>
-            </div>
-            <h2>VS</h2>
-            <div>
-                <p id="option-2">Option 2</p>
-                <p id="vote-2">Vote 2</p>
+            <div id="poll-display">
             </div>
             <button id="option-2-addition">+</button>
             <button id="option-2-subtraction">-</button>
             <button id="publish-vote">Publish</button>
         </section>
-        <section id="display-past-polls-section">
-            <div>
+        <section id="past-polls-section">
+            <div id="past-polls-dispaly">
             </div>
         </section>
     </main>
