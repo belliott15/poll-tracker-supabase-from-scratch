@@ -36,7 +36,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to left, red, purple, blue);
+    background: linear-gradient(45deg, red, white, purple, blue);
     height: 100%;
     width: 100%;
 }
@@ -58,7 +58,7 @@ body {
     align-items: center;
 }
 
-#sign-in-container{
+#sign-in-form{
     border: 10px white double;
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@ body {
     border-radius: 5px;
 }
 
-#sign-up-container{
+#sign-up-form{
     border: 10px white double;
     display: flex;
     flex-direction: column;

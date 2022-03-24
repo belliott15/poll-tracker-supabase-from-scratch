@@ -4,7 +4,7 @@ const SUPABASE_URL = 'https://cpwfuaqvwlzrtpauugot.supabase.co';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-async function getPolls(){
+export async function getPolls(){
     const response = await client
         .from('polls')
         .select('*');
@@ -12,27 +12,44 @@ async function getPolls(){
     return response.body;
 }
 
-async function createPolls(poll){
+export async function createPolls(poll){
     const response = await client
         .from('polls')
-        .select('*')
         .insert(poll);
 
     return response.body;
 }
 
-async function signIn(user){
+export async function signIn(email, password){
     const response = await client.auth.signIn({
-        email: user.email,
-        password: user.password,
+        email: email,
+        password: password,
     });
-    return response.body;
+    return response;
 }
 
-async function signUp(user){
+export async function signUp(email, password){
     const response = await client.auth.signUp({
-        email: user.email,
-        password: user.password,
+        email: email,
+        password: password,
     });
-    return response.body;
+    return response;
+}
+
+export async function getUser(){
+    const user = client.auth.user();
+
+    return user;
+}
+
+export async function redirectUser(){
+    const user = getUser();
+
+    if(!user){
+        window.location.href = '../';
+    }
+}
+
+export async function logout(){
+    await client.auth.signOut();
 }
