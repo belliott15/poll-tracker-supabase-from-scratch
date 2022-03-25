@@ -34,7 +34,6 @@ body {
 #polls-main-page{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     background: linear-gradient(45deg, red, white, purple, blue);
     height: 100%;
     width: 100%;
@@ -140,4 +139,32 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+#current-polls-container{
+    display: flex;
+}
+
+#current-polls-container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#option-1-addition{
+    height: 50px;
+
+}
+
+#option-1-subtraction{
+    height: 50px;
+}
+
+#option-2-addition{
+    height: 50px;
+}
+
+#option-2-subtraction{
+    height: 50px;
 }

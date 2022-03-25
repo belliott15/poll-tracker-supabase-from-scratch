@@ -100,7 +100,7 @@ async function displayPastPolls() {
 
 window.addEventListener('load', async () => {
     pastPollsEl.textContent = '';
-    displayPastPolls();
+    await displayPastPolls();
 });
 
 logoutButton.addEventListener('click', async () => {
