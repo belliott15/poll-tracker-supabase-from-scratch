@@ -4,9 +4,11 @@ import { getPolls,
     logout } from '../fetch-utils.js';
 import { renderPoll } from '../render-utils.js';
 
+const logoutButton = document.querySelector('#logout-button');
+
 const userFormEl = document.querySelector('#user-form');
 const currentPollEl = document.getElementById('poll-display');
-const pastPollsEl =document.querySelector('#past-polls-display');
+const pastPollsEl = document.querySelector('#past-polls-display');
 
 const option1AdditionButton = document.querySelector('#option-1-addition');
 const option1SubtractionButton = document.querySelector('#option-1-subtraction');
@@ -15,7 +17,7 @@ const option2SubtractionButton = document.querySelector('#option-2-subtraction')
 
 const publishVoteButton = document.querySelector('#publish-vote');
 
-let question = '';
+let question = 'Mystery Question';
 let name1 = '';
 let name2 = '';
 let vote1 = 0;
@@ -95,3 +97,15 @@ async function displayPastPolls() {
     }
 
 }
+
+window.addEventListener('load', async () => {
+    pastPollsEl.textContent = '';
+    displayPastPolls();
+});
+
+logoutButton.addEventListener('click', async () => {
+    await logout();
+    window.location.replace('../');
+});
+
+displayCurrentPoll();

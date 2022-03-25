@@ -9,24 +9,23 @@ signInForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const data = new FormData(signInForm);
-    const user = await signIn(data.get('email'), data.get('password'));
-    // const user = await getUser();
+    await signIn(data.get('email'), data.get('password'));
+    const user = await getUser();
     console.log(user);
     if (user){
-        window.href = './polls';
+        window.location.replace('./polls');
     }
 });
 
 signUpForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const data = new FormData(signInForm);
-    const user = await signUp(data.get('email'), data.get('password'));
-    console.log(user);
+    const data = new FormData(signUpForm);
+    await signUp(data.get('email'), data.get('password'));
 
-    // const user = await getUser();
+    const user = await getUser();
     if (user){
-        window.href = './polls';
+        window.location.replace('./polls');
     }
 });
   // get user input

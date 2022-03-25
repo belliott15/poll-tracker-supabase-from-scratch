@@ -24,8 +24,8 @@ export async function createPolls(poll){
 
 export async function signIn(email, password){
     const response = await client.auth.signIn({
-        email: email.email,
-        password: password.password,
+        email: email,
+        password: password,
     });
     return response.user;
 }
