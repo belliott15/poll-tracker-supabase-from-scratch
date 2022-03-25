@@ -19,7 +19,7 @@ export function renderPoll(question, name1, vote1, name2, vote2){
     option1Div.append(option1El, vote1El);
     option2Div.append(option2El, vote2El);
 
-    div.append(question, option1Div, vsEl, option2Div);
+    div.append(questionEl, option1Div, vsEl, option2Div);
     div.classList.add('current-poll');
 
     return div;

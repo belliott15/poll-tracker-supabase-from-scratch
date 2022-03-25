@@ -15,6 +15,7 @@
 
 <body>
     <header>
+        <h1>Poll Tracker</h1>
         <button id="logout-button">Logout</button>
     </header>
     <main id="polls-main-page">
@@ -27,12 +28,16 @@
                             <input name="question-input" id="question-input" />
                         </div>
                         <div id="option-div">
-                            <h3>Option 1</h3>
-                            <input name="option-1-input" id="option-1-input" />
+                            <div id="option-1-div">
+                                <h3>Option 1</h3>
+                                <input name="option-1-input" id="option-1-input" />
+                            </div>
+                            <div id="option-2-div">
                             <h3>Option 2</h3>
-                            <input name="option-2-input" id="option-2-input" />
-                            <button name="submit-button" id="submit button">Submit</button>
+                                <input name="option-2-input" id="option-2-input" />
+                            </div>
                         </div>
+                        <button name="submit-button" id="submit-button">Submit</button>
                     </form>
                 </div>
             </section>
@@ -53,6 +58,7 @@
             </section>
         </section>
         <h3 id="bottom-row"> Your past Votes </h3>
+        <h4>(click to delete a past poll)</h4>
         <section id="past-polls-section">
             <div id="past-polls-display">
             </div>
