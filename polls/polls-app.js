@@ -1,7 +1,8 @@
 import { getPolls, 
     createPolls, 
     logout, 
-    deleteItem} from '../fetch-utils.js';
+    deleteItem,
+    checkAuth} from '../fetch-utils.js';
 import { renderPoll } from '../render-utils.js';
 
 const logoutButton = document.querySelector('#logout-button');
@@ -16,6 +17,8 @@ const option2AdditionButton = document.querySelector('#option-2-addition');
 const option2SubtractionButton = document.querySelector('#option-2-subtraction');
 
 const publishVoteButton = document.querySelector('#publish-vote');
+
+checkAuth();
 
 let question = 'Mystery Question';
 let name1 = '';
@@ -93,6 +96,8 @@ async function displayPastPolls() {
     for (let poll of allPolls){
         const pastPolls = renderPoll(poll.question, poll.name_1, 
             poll.vote_1, poll.name_2, poll.vote_2);
+        pastPolls.classList.remove('current-poll');
+        pastPolls.classList.add('past-polls');
         pastPolls.addEventListener('click', async () => {
             await deleteItem(poll.id);
             await displayPastPolls();

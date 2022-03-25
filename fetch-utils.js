@@ -64,3 +64,9 @@ export async function deleteItem(id){
     
     return response;
 }
+
+export async function checkAuth() {
+    const user = await getUser();
+
+    if (!user) location.replace('../');
+}

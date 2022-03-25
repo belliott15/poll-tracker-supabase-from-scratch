@@ -61,6 +61,7 @@ main {
     grid-template-columns: 1fr 1fr;
 }
 
+
 section {
     display: flex;
     justify-content: center;
@@ -200,13 +201,38 @@ footer {
     padding: 10px;
 }
 
+.past-polls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 3px white double;
+    height: 200px;
+    width: 350px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.past-polls:hover{
+    opacity: .7;
+    background-color: purple;
+    background-image: url('/assets/trash.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #option-1-buttons{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+#option-1-buttons button{
     height: 50px;
     width: 50px;
+    margin: 10px;
+    border-radius: 10px;
 }
 
 #option-2-buttons{
@@ -216,11 +242,54 @@ footer {
     flex-direction: column;
 }
 
+#option-2-buttons button{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#publish{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#publish-vote{
+    height: 40px;
+    width: 100px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bottom-row{
+    color: white;
+    font-family: prata, sans-serif;
+    font-size: 2rem;
+    border-bottom: white 4px double;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+
 #past-polls-display{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
     column-span: all;
-    margin: 50px 10px 0px 50px;
+    margin: 50px 10px 50px 50px;
+    font-family: prata, sans-serif;
+    color: white;
+    font-size: 1em;
 }
