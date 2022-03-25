@@ -11,7 +11,7 @@ signInForm.addEventListener('submit', async (e) => {
     const data = new FormData(signInForm);
     await signIn(data.get('email'), data.get('password'));
     const user = await getUser();
-    console.log(user);
+    
     if (user){
         window.location.replace('./polls');
     }

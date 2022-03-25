@@ -1,6 +1,5 @@
 import { getPolls, 
     createPolls, 
-    getUser, 
     logout } from '../fetch-utils.js';
 import { renderPoll } from '../render-utils.js';
 
