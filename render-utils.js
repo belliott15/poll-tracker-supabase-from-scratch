@@ -9,7 +9,7 @@ export function renderPoll(question, name1, vote1, name2, vote2){
     const option2El = document.createElement('p');
     const vote2El = document.createElement('p');
 
-    questionEl.textContent = question;
+    questionEl.textContent = `${question}?`;
     option1El.textContent = name1;
     vote1El.textContent = vote1;
     option2El.textContent = name2;
@@ -19,7 +19,7 @@ export function renderPoll(question, name1, vote1, name2, vote2){
     option1Div.append(option1El, vote1El);
     option2Div.append(option2El, vote2El);
 
-    div.append(questionEl, option1Div, vsEl, option2Div);
+    div.append(question, option1Div, vsEl, option2Div);
     div.classList.add('current-poll');
 
     return div;

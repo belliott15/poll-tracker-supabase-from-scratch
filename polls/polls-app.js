@@ -1,6 +1,7 @@
 import { getPolls, 
     createPolls, 
-    logout } from '../fetch-utils.js';
+    logout, 
+    deleteItem} from '../fetch-utils.js';
 import { renderPoll } from '../render-utils.js';
 
 const logoutButton = document.querySelector('#logout-button');
@@ -92,6 +93,10 @@ async function displayPastPolls() {
     for (let poll of allPolls){
         const pastPolls = renderPoll(poll.question, poll.name_1, 
             poll.vote_1, poll.name_2, poll.vote_2);
+        pastPolls.addEventListener('click', async () => {
+            await deleteItem(poll.id);
+            await displayPastPolls();
+        });
         pastPollsEl.append(pastPolls);
     }
 

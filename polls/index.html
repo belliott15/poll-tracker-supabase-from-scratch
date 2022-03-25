@@ -15,43 +15,42 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="../assets/big-logo.png" />
-        </div>
-        <button id="logout-button"></button>
+        <button id="logout-button">Logout</button>
     </header>
     <main id="polls-main-page">
-        <section id="user-input-container">
-            <div>
-                <form id="user-form">
-                    <div id="question-div">
-                        <h2>Question</h2>
-                        <input name="question-input" id="question-input" />
-                    </div>
-                    <div id="option-div">
-                        <h3>Option 1</h3>
-                        <input name="option-1-input" id="option-1-input" />
-                        <h3>Option 2</h3>
-                        <input name="option-2-input" id="option-2-input" />
-                        <button name="submit-button" id="submit button">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-        <section id="current-polls-container">
-            <div><button id="option-1-addition">+</button>
-                <button id="option-1-subtraction">-</button>
-            </div>
-            <div id="poll-display">
-            </div>
-            <div>
-                <button id="option-2-addition">+</button>
-                <button id="option-2-subtraction">-</button>
-            </div>
-            <div></div>
-            <div>
-                <button id="publish-vote">Publish</button>
-            </div>
+        <section id="top-row-content">
+            <section id="user-input-container">
+                <div>
+                    <form id="user-form">
+                        <div id="question-div">
+                            <h2>Question</h2>
+                            <input name="question-input" id="question-input" />
+                        </div>
+                        <div id="option-div">
+                            <h3>Option 1</h3>
+                            <input name="option-1-input" id="option-1-input" />
+                            <h3>Option 2</h3>
+                            <input name="option-2-input" id="option-2-input" />
+                            <button name="submit-button" id="submit button">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section id="current-polls-container">
+                <div id="option-1-buttons">
+                    <button id="option-1-addition">+</button>
+                    <button id="option-1-subtraction">-</button>
+                </div>
+                <div id="poll-display">
+                </div>
+                <div id="option-2-buttons">
+                    <button id="option-2-addition">+</button>
+                    <button id="option-2-subtraction">-</button>
+                </div>
+                <div>
+                    <button id="publish-vote">Publish</button>
+                </div>
+            </section>
         </section>
         <section id="past-polls-section">
             <div id="past-polls-display">

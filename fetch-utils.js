@@ -55,3 +55,12 @@ export async function redirectUser(){
 export async function logout(){
     await client.auth.signOut();
 }
+
+export async function deleteItem(id){
+    const response = await client
+        .from('polls')
+        .delete()
+        .match({ id: id });
+    
+    return response;
+}

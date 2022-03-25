@@ -48,9 +48,21 @@ main {
     align-items: center;
 }
 
+#welcome{
+    color: white;
+    font-family: prata, sans-serif;
+    font-size: 2rem;
+    border-bottom: white 4px double;
+    padding-top: 50px;
+}
+
+#top-row-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 section {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -58,9 +70,12 @@ section {
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: rgb(43, 43, 117);
     height: var(--header-height);
-    box-shadow: var(--shadow);
+    box-shadow: 10px 10px 20px -10px rgb(177, 4, 4);
+    color: white;
+    font-family: prata, sans-serif;
+    padding-right: 50px;
 }
 
 
@@ -73,14 +88,10 @@ h2 {
     margin-right: 20px;
 }
 
-header img {
-    height: var(--header-height);
-}
-
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -146,4 +157,70 @@ footer {
     margin: 10px;
     font-size: 25px;
     border-radius: 5px;
+}
+
+#logout-button{
+    height: 30px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    background-color: maroon;
+    color: white;
+    font-size: 1.5em;
+}
+
+#user-form{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+#user-form div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#option-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.current-poll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 3px white double;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#option-1-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+    width: 50px;
+}
+
+#option-2-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#past-polls-display{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-span: all;
+    margin: 50px 10px 0px 50px;
 }
