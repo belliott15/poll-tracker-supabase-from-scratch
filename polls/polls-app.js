@@ -18,6 +18,8 @@ const option2SubtractionButton = document.querySelector('#option-2-subtraction')
 
 const publishVoteButton = document.querySelector('#publish-vote');
 
+const searchBar = document.querySelector('#search-bar');
+
 checkAuth();
 
 let question = 'Mystery Question';
@@ -118,3 +120,15 @@ logoutButton.addEventListener('click', async () => {
 });
 
 displayCurrentPoll();
+
+searchBar.addEventListener('input', async () => {
+    const search = searchBar.value;
+
+    const pastPollSearch = await getPolls(search);
+    pastPollsEl.textContent = '';
+    for (let poll of pastPollSearch){
+        const thisPoll = renderPoll(poll.question, poll.name_1, 
+            poll.vote_1, poll.name_2, poll.vote_2);
+        pastPollsEl.append(thisPoll);
+    }
+});

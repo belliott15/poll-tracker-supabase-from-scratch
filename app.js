@@ -15,10 +15,6 @@ signInForm.addEventListener('submit', async (e) => {
     if (user){
         window.location.replace('./polls');
     }
-    if (user !== true){
-        alert('Please enter valid username and password');
-        signInForm.reset();
-    }
 });
 
 signUpForm.addEventListener('submit', async (e) => {
