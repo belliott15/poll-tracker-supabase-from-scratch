@@ -2,7 +2,7 @@ import { getPolls,
     createPolls, 
     logout, 
     deleteItem,
-    checkAuth} from '../fetch-utils.js';
+    checkAuth } from '../fetch-utils.js';
 import { renderPoll } from '../render-utils.js';
 
 const logoutButton = document.querySelector('#logout-button');
