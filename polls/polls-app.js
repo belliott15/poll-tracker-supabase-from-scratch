@@ -129,6 +129,11 @@ searchBar.addEventListener('input', async () => {
     for (let poll of pastPollSearch){
         const thisPoll = renderPoll(poll.question, poll.name_1, 
             poll.vote_1, poll.name_2, poll.vote_2);
+        thisPoll.classList.add('past-polls');
+        thisPoll.addEventListener('click', async () => {
+            await deleteItem(poll.id);
+            await displayPastPolls();
+        });
         pastPollsEl.append(thisPoll);
     }
 });
