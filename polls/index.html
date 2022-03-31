@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Poll Tracker</h1>
+        <button id="logout-button">Logout</button>
+    </header>
+    <main id="polls-main-page">
+        <section id="top-row-content">
+            <section id="user-input-container">
+                <div>
+                    <form id="user-form">
+                        <div id="question-div">
+                            <h2>Question</h2>
+                            <input name="question-input" id="question-input" />
+                        </div>
+                        <div id="option-div">
+                            <div id="option-1-div">
+                                <h3>Option 1</h3>
+                                <input name="option-1-input" id="option-1-input" />
+                            </div>
+                            <div id="option-2-div">
+                            <h3>Option 2</h3>
+                                <input name="option-2-input" id="option-2-input" />
+                            </div>
+                        </div>
+                        <button name="submit-button" id="submit-button">Submit</button>
+                    </form>
+                </div>
+            </section>
+            <section id="current-polls-container">
+                <div id="option-1-buttons">
+                    <button id="option-1-addition">+</button>
+                    <button id="option-1-subtraction">-</button>
+                </div>
+                <div id="poll-display">
+                </div>
+                <div id="option-2-buttons">
+                    <button id="option-2-addition">+</button>
+                    <button id="option-2-subtraction">-</button>
+                </div>
+                <div>
+                    <button id="publish-vote">Publish</button>
+                </div>
+            </section>
+        </section>
+        <h3 id="bottom-row"> Your past Votes </h3>
+        <h4>(click to delete a past poll)</h4>
+        <div>
+            <input id="search-bar" placeholder="type an old question here"/>
+        </div>
+        <section id="past-polls-section">
+            <div id="past-polls-display">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="copy gutter-right">&copy; 2022 Alchemy Code Lab</div>
+    </footer>
+
+    <script type="module" src="./polls-app.js"></script>
+</body>
+
+</html>

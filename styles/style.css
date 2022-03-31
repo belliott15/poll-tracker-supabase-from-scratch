@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
 body {
     /* feel free to update these css variables for a quick theme */
     
@@ -29,6 +30,7 @@ body {
     
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
+    background: linear-gradient(70deg, maroon 50%, steelblue 40%);
 }
 
 main {
@@ -39,26 +41,43 @@ main {
     margin-bottom: calc(var(--footer-height));
 }
 
-section {
-    background-color: var(--color5);
-    max-width: 80%;
-    display: flex;
-    flex-direction: column;
+.main-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    padding-top: var(--gutter);
-    padding-bottom: var(--gutter);
-    margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+}
+
+#welcome{
+    color: white;
+    font-family: prata, sans-serif;
+    font-size: 2rem;
+    border-bottom: white 4px double;
+    padding-top: 50px;
+}
+
+#top-row-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--color3);
+    background-color: rgb(43, 43, 117);
     height: var(--header-height);
-    box-shadow: var(--shadow);
+    box-shadow: 10px 10px 20px -10px rgb(177, 4, 4);
+    color: white;
+    font-family: prata, sans-serif;
+    padding-right: 50px;
+    flex-wrap: wrap;
 }
 
 
@@ -67,18 +86,20 @@ h2 {
     font-weight: bold;
 }
 
-.gutter-right {
-    margin-right: 20px;
+h4{
+    color: white;
+    margin: 0;
+    font-weight: bold;
 }
 
-header img {
-    height: var(--header-height);
+.gutter-right {
+    margin-right: 20px;
 }
 
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -88,4 +109,248 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+#sign-up-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    /* border: black solid 3px; */
+    margin-right: 100px;
+    height: 90%;
+    width: 100%;
+    padding: 10px;
+}
+
+#sign-up-form p{
+    margin: 0 auto;
+    font-family: prata, sans-serif;
+}
+
+#sign-up-form input{
+    height: 25px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#sign-up-form button{
+    margin: 10px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+#sign-in-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    height: 90%;
+    width: 90%;
+    padding: 10px;
+}
+
+#sign-in-form p{
+    margin: 0 auto;
+    font-family: prata, sans-serif;
+}
+
+#sign-in-form input{
+    height: 25px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#sign-in-form button{
+    margin: 10px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+#logout-button{
+    height: 30px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    background-color: maroon;
+    color: white;
+    font-size: 1.5em;
+}
+
+#user-form{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+#question-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#question-input{
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 25px;
+}
+
+#option-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+#option-1-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#option-1-input{
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#option-2-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#option-2-input{
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+#submit-button{
+    width: 100%;
+    height: 30px;
+    font-family: prata, sans-serif;
+    font-size: 1em;
+    margin: 5px;
+}
+
+.current-poll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 3px white double;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.past-polls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: 3px white double;
+    width: 430px;
+    height: 182px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.past-polls:hover{
+    opacity: .7;
+    background-color: purple;
+    background-image: url('/assets/trash.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#option-1-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#option-1-buttons button{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 2rem;
+}
+
+#option-2-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#option-2-buttons button{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 2rem;
+}
+
+#publish{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#publish-vote{
+    height: 40px;
+    width: 100px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bottom-row{
+    color: white;
+    font-family: prata, sans-serif;
+    font-size: 2rem;
+    border-bottom: white 4px double;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+#search-bar{
+    width: 300px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#past-polls-display{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-span: all;
+    margin: 50px 10px 50px 50px;
+    font-family: prata, sans-serif;
+    color: white;
+    font-size: 1em;
 }

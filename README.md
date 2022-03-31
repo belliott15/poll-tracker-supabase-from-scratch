@@ -7,6 +7,7 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 ## Making a plan
 
 1) **Make a drawing of your app. Simple "wireframes"** 
+![Wireframe for poll tracker with supabase](/assets/Poll%20tracker%20supabase.png "wireframe for poll tracker with supabase")
 1) **Look at the drawing and name the HTML elements you'll need to realize your vision**
 1) **Look at the drawing and imagine using the app. What _state_ do you need to track?** 
 1) **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")** 
@@ -15,12 +16,63 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 1) **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
 1) **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
 
-Additional considerations:
-- Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
-- Consider your data model. 
-  - What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need? 
-  - What are the key/value pairs? 
-  - What arrays might you need? 
-  - What needs to live in a persistence layer?
-- Is there some state we need to initialize?
-- Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be resused?)
+## sign in page HTML
+-header, body, footer
+-header div to display name of app
+-body
+  -section to hold divs
+    -div to hold sign up information
+      -input for email required name="email"
+      -input for password required name ="password"
+      -button to submit and get user id through supabase
+        -if requirements not met redirect to sign in page
+    -div to hold sign in information
+      -input for email required name="email"
+      -input for password required name ="password"
+      -button to submit and get user id through supabase
+         -if requirements not met redirect to sign in page
+
+## poll tracker HTML
+-header, body, footer in template
+- header div to display poll tracker
+-body
+  -section 1
+    -div
+      -form tag 
+        -3 inputs
+        -3 p tags
+        -button
+  -section 2
+    -h2 to display question
+    -2 buttons to increment/decrement option 1 votes
+      -p tag each
+    -div
+      -ptag for option 1
+      -ptag for vote 1
+    -h2 tag for vs text
+    -div
+      -ptag for option 2
+      -ptag for vote 2
+    -2 button to increment/decrement option 2 votes
+    -button to publish results into the pastvotes section
+  -section 3
+    -div to display previous votes
+      -uses same format to display past as was used to display current
+
+## state in "polls" supabase
+-question
+-option1
+-option2
+-vote1
+-vote2
+
+## events
+sign in button to sign in users
+sing up button to sign up users
+form submit to get user data into the display current vote
+4 buttons to increment or decrement the votes
+a publish button to push information into supabase and pull it back to render in display previous votes
+load window to display history of games
+logout button to return to home screen an sign in or sign up
+
+![screenshot of rubric](/assets/rubric.png "rubric screenshot")
