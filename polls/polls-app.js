@@ -110,7 +110,6 @@ async function displayPastPolls() {
 }
 
 window.addEventListener('load', async () => {
-    pastPollsEl.textContent = '';
     await displayPastPolls();
 });
 
